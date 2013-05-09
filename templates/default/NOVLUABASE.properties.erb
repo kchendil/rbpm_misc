@@ -1,0 +1,11 @@
+# Prompts for Driver = User Application
+# Prompts for Package = NOVLPROVNOTF
+# Prompts for Package = NOVLPMANNOTF
+# Prompts for Pacakge = NOVLUABASE
+GCV Name : Driver Name; GCV Type : string; GCV Prompt : NOVLUABASE-DriverNamePrompt = UserApplication
+GCV Name : Authentication ID; GCV Type : dn; GCV Prompt : NOVLUABASE-ConnectionPrompts = CN=uaadmin,OU=sa,O=data
+GCV Name : Application Password; GCV Type : password-ref; GCV Prompt : NOVLUABASE-ConnectionPrompts = n
+GCV Name : Host; GCV Type : string; GCV Prompt : NOVLUABASE-ConnectionPrompts = http://127.0.0.1
+GCV Name : Port; GCV Type : integer; GCV Prompt : NOVLUABASE-ConnectionPrompts = 8180
+GCV Name : Application Context; GCV Type : string; GCV Prompt : NOVLUABASE-ConnectionPrompts = IDMProv
+GCV Name : Allow Initiator Override; GCV Type : enum; Format (No->no|Yes->yes); GCV Prompt : NOVLUABASE-ConnectionPrompts = yes

@@ -1,0 +1,15 @@
+# Prompts for Driver = Managed System Gateway
+# Prompts for Pacakge = NOVLLIBAJC
+# Prompts for Pacakge = NOVLIDMMSGWB
+GCV Name : Driver Name; GCV Type : string; GCV Prompt : NOVLIDMMSGWB-DriverNamePrompt = Managed System Gateway Driver
+GCV Name : Address(es); GCV Type : string; GCV Prompt : NOVLIDMMSGWB-ConnectionPrompts = 
+GCV Name : Port; GCV Type : integer; GCV Prompt : NOVLIDMMSGWB-ConnectionPrompts = 7707
+GCV Name : Protocol; GCV Type : enum; Format (http->true|https->false); GCV Prompt : NOVLIDMMSGWB-ConnectionPrompts = false
+GCV Name : KMO Name; GCV Type : string; GCV Prompt : NOVLIDMMSGWB-ConnectionPrompts = SSL CertificateIP
+GCV Name : Connect To Remote Loader; GCV Type : enum; Format (yes->true|no->false); GCV Prompt : NOVLIDMMSGWB-RemoteLoaderPrompts = false
+GCV Name : Host Name; GCV Type : string; GCV Prompt : NOVLIDMMSGWB-RemoteLoaderPrompts = 
+GCV Name : Port; GCV Type : integer; GCV Prompt : NOVLIDMMSGWB-RemoteLoaderPrompts = 8090
+GCV Name : Remote Password; GCV Type : password-ref; GCV Prompt : NOVLIDMMSGWB-RemoteLoaderPrompts = 
+GCV Name : Driver Password; GCV Type : password-ref; GCV Prompt : NOVLIDMMSGWB-RemoteLoaderPrompts = 
+# Prompts for Pacakge = NOVLMSGWMSYS
+# Prompts for Pacakge = NOVLMSGWRULE
