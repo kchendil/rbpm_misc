@@ -42,7 +42,7 @@ end
 
  
   execute "Create user app admin 1" do
-    command " \"#{jre_loc}/bin/java\" -classpath \"#{build_loc}/instutil.jar\":\"#{build_loc}/nxsl.jar\" com.novell.idm.wrapper.tools.CreateDriverConfig \"#{build_loc}/rbpm_userapp_admin_template.ldif\" \"/tmp/rbpm_userapp_admin.ldif\" \"/tmp/rbpm_userapp_admin.properties\" "
+    command " \"#{jre_loc}/bin/java\" -classpath \"#{build_loc}/instutil.jar\":\"#{build_loc}/nxsl.jar\" com.novell.idm.wrapper.tools.CreateDriverConfig \"#{build_loc}/rbpm_userapp_admin_template.ldif\" \"/tmp/rbpm_userapp_admin.ldif\" \"/tmp/rbpm_userapp_admin.properties\" > /var/opt/novell/userapp_admin1.log "
 	creates "/var/opt/novell/userapp_admin1.log"
     action :run
   
@@ -50,7 +50,7 @@ end
  
 
      execute "Create user app admin 2" do
-     command " LD_LIBRARY_PATH=\"#{build_loc}\"  \"#{build_loc}/ldapmodify\" -ZZ -h 127.0.0.1 -p #{ldap_port} -D \"#{dn_admin_name}\" -w #{idm_password} -a -c -f \"/tmp/rbpm_userapp_admin.ldif\" " 
+     command " LD_LIBRARY_PATH=\"#{build_loc}\"  \"#{build_loc}/ldapmodify\" -ZZ -h 127.0.0.1 -p #{ldap_port} -D \"#{dn_admin_name}\" -w #{idm_password} -a -c -f \"/tmp/rbpm_userapp_admin.ldif\" > /var/opt/novell/userapp_admin2.log" 
     creates "/var/opt/novell/userapp_admin2.log"
      action :run
   
